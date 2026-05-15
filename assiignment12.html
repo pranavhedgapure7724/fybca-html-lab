@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        button {
+            background-color: #4CAF50; /* Green background */
+            color: white;              /* White text */
+            border: none;              /* Remove border */
+            padding: 10px 20px;        /* Add spacing */
+            margin: 5px;               /* Space between buttons */
+            border-radius: 5px;        /* Rounded corners */
+            cursor: pointer;           /* Pointer on hover */
+            font-size: 16px;           /* Bigger text */
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green on hover */
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+
+            // Append text
+            $("#btn1").click(function () {
+                $("p").append(" <b>Appended text FYBCA</b>");
+            });
+
+            // Append list item
+            $("#btn2").click(function () {
+                $("ol").append("<li>Appended item</li>");
+            });
+
+            // Insert before image
+            $("#btn3").click(function () {
+                $("img").before("<b>Before </b>");
+            });
+
+            // Insert after image
+            $("#btn4").click(function () {
+                $("img").after("<i> After</i>");
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <ol>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ol>
+
+    <button id="btn1">Append text</button>
+    <button id="btn2">Append list item</button>
+
+    <hr>
+
+    <p>
+        This is an image. Text will be inserted before and after this image.
+        <img src="google.jfif" alt="Symbol" width="200">
+    </p>
+
+    <br>
+
+    <button id="btn3">Insert before</button>
+    <button id="btn4">Insert after</button>
+
+</body>
+
+</html>
